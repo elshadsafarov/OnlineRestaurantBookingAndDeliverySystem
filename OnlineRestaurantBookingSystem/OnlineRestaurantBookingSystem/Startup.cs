@@ -32,22 +32,26 @@ namespace OnlineRestaurantBookingSystem
 
                 x.UseSqlServer(configuration["ConnectionStrings:DefaultConnection"]);
             });
+            services.AddHttpContextAccessor();
             services.AddSession();
+
             services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders()
                                                     .AddEntityFrameworkStores<RestaurantDbContext>();
             services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1);
-            services.AddAuthentication(options=>
-            {
-                options.DefaultChallengeScheme = FacebookDefaults.AuthenticationScheme;
-                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-            }).AddFacebook(options =>
+            //Login with Sosial Network accounts
 
-            {
-                options.AppId = "3174222672619464";
-                options.AppSecret = "5aa1c120adeb262aa23cf2645d75b4ea";
-            }).AddCookie();
+            //services.AddAuthentication(options=>
+            //{
+            //    options.DefaultChallengeScheme = FacebookDefaults.AuthenticationScheme;
+            //    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            //    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            //}).AddFacebook(options =>
 
+            //{
+            //    options.AppId = "3174222672619464";
+            //    options.AppSecret = "5aa1c120adeb262aa23cf2645d75b4ea";
+            //}).AddCookie();
+          
 
         }
 
@@ -62,6 +66,13 @@ namespace OnlineRestaurantBookingSystem
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseSession();
+            app.Use(next =>
+            {
+                return context =>
+                {
+                    return next(context);
+                };
+            });
             app.UseMvc(route =>
             {
                 route.MapRoute(name: "", template: "{controller=Home}/{action=Index}/{id?}");

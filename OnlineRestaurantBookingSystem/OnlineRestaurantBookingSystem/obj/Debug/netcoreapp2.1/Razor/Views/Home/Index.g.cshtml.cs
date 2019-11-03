@@ -18,8 +18,18 @@ using OnlineRestaurantBookingSystem.Models;
 
 #line default
 #line hidden
+#line 2 "C:\Users\baku\source\repos\OnlineRestaurantBookingAndDeliverySystem\OnlineRestaurantBookingSystem\OnlineRestaurantBookingSystem\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#line 3 "C:\Users\baku\source\repos\OnlineRestaurantBookingAndDeliverySystem\OnlineRestaurantBookingSystem\OnlineRestaurantBookingSystem\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Http;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fed8bbf260b975429df0b0ba3ecc5a9bfafa29cb", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fe5c863558d88dc9aa0eaeec72022a9edf387b12", @"/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ef065318b590bac90b85fe9dad515d9838526824", @"/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

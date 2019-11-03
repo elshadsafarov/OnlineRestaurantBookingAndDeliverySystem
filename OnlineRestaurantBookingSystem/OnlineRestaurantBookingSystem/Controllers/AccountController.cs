@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using OnlineRestaurantBookingSystem.Models;
@@ -46,11 +49,6 @@ namespace OnlineRestaurantBookingSystem.Controllers
 
         }
 
-        public async Task<IActionResult> LogOut()
-        {
-            await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
-        }
 
         [HttpGet]
         public IActionResult Login()
@@ -58,11 +56,10 @@ namespace OnlineRestaurantBookingSystem.Controllers
             return View();
         }
 
-
         [AutoValidateAntiforgeryToken]
         [HttpPost]
         public async Task<IActionResult> Login(LoginModel model)
-        {
+            {
             if (ModelState.IsValid)
             {
                 var user = await _userManager.FindByEmailAsync(model.UserEmail);
@@ -76,42 +73,26 @@ namespace OnlineRestaurantBookingSystem.Controllers
 
                 if (user != null)
                 {
-                    var PasswordResult = await _signInManager.PasswordSignInAsync(user, model.Password, true, true);
+                    var PasswordResult = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, true);
                     if (PasswordResult.Succeeded)
                     {
-                        await _signInManager.SignInAsync(user, true);
+                        //await _signInManager.SignInAsync(user, true);
                         return RedirectToAction("Index", "Home");
+
                     }
                     else
                     {
                         ModelState.AddModelError("", "Email or password is incorrect!");
                     }
-
-
-                    //    var PasswordCheckResult = await _signInManager.CheckPasswordSignInAsync(user, model.Password, false);
-                    //    if (PasswordCheckResult.Succeeded)
-                    //    {
-                    //        return RedirectToAction("Index", "Home");
-
-                    //    }
-                    //    else
-                    //    {
-                    //        ModelState.AddModelError("", "Email or Password is not valid");
-                    //        return View(model);
-                    //    }
-
-                    //}
-                    //else
-                    //{
-                    //    ModelState.AddModelError("", "Email or Password is not valid");
-                    //    return View(model);
-                    //}
-
                 }
             }
-            return View();
-
+            return View(model);
         }
 
+        public async Task<IActionResult> LogOut()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
