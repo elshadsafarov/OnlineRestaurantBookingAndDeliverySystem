@@ -68,7 +68,7 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n");
             EndContext();
             BeginContext(79, 472, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab6ac7f192d04e529f4443a7e529d4ff", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c4d6e20ab196476388c818cb8402155b", async() => {
                 BeginContext(85, 459, true);
                 WriteLiteral(@"
     <meta charset=""UTF-8"">
@@ -96,7 +96,7 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(553, 2311, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "290fe0a8f08645de9047da3d75f6d4d1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b698de6139cf427d9196f92153cba15b", async() => {
                 BeginContext(559, 902, true);
                 WriteLiteral(@"
     <div class=""form-body"">
@@ -143,7 +143,7 @@ WriteAttributeValue("", 1518, Url.Action("Register","Account"), 1518, 33, false)
                 WriteLiteral(" class=\"active\">Register</a>\r\n                        </div>\r\n                        ");
                 EndContext();
                 BeginContext(1638, 715, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d6d29b7484d2432f845384e17b1f07a7", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d25d2ee857e4bf48c74096da7e2ea26", async() => {
                     BeginContext(1658, 556, true);
                     WriteLiteral(@"
                             <input class=""form-control"" type=""text"" name=""UserName"" placeholder=""User Name"" required>

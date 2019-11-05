@@ -67,7 +67,7 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n<html lang=\"en\" class=\"no-js\">\r\n\r\n");
             EndContext();
             BeginContext(155, 790, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f42cd3edc49a4dae943050eddef83afd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ef6677e1a9c14aa298d519edc638f66d", async() => {
                 BeginContext(161, 777, true);
                 WriteLiteral(@"
     <meta charset=""UTF-8"">
@@ -102,7 +102,7 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(947, 6587, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b450975568b7443da64c076bf8d12846", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "63c082cdf27b41d19a22ab9321f1c1f7", async() => {
                 BeginContext(953, 1295, true);
                 WriteLiteral(@"
     <header class=""header"">
@@ -156,7 +156,7 @@ using Microsoft.AspNetCore.Http;
                 WriteLiteral(" </a>\r\n                            ");
                 EndContext();
                 BeginContext(3347, 113, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a70231cd23be42e6947021e93a209613", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "68f8ac2d53754beba6a2cb607db47905", async() => {
                     BeginContext(3448, 8, true);
                     WriteLiteral("Log Out ");
                     EndContext();

@@ -41,12 +41,13 @@
                         <form method="post">
                             <input class="form-control" type="text" name="UserEmail" placeholder="E-mail Address" required>
                             <input class="form-control" type="password" name="Password" placeholder="Password" required>
-                            <label asp-for="RememberMe">
+                            @*<label asp-for="RememberMe">
 
-                                <input asp-for="RememberMe" />
-                                @Html.DisplayNameFor(m=>m.RememberMe)
-                            </label>
-                            @*<input type="checkbox" id="chk1"><label for="chk1">Remember me</label>*@
+                                    <input asp-for="RememberMe" />
+                                    @Html.DisplayNameFor(m=>m.RememberMe)
+                                </label>*@
+                            <input type="checkbox" asp-for="RememberMe" id="chk1">
+                            <label for="chk1">Remember me</label>
                             <div class="form-button">
                                 <button id="submit" type="submit" class="ibtn">Login</button> @*<a href="forget2.html">Forget password?</a>*@
                             </div>

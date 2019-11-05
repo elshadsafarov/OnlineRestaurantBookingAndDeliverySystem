@@ -65,7 +65,7 @@ namespace OnlineRestaurantBookingSystem.Controllers
                 var user = await _userManager.FindByEmailAsync(model.UserEmail);
 
                 if (user == null)
-                {
+                { 
                     ModelState.AddModelError("", "User not exists");
                     return View(model);
 
